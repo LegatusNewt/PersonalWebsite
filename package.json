@@ -1,0 +1,19 @@
+{
+  "name": "resume_website",
+  "version": "1.0.0",
+  "description": "Act as a personal website and professional resume or blog",
+  "scripts": {
+    "start" : "node Server.js"
+ },
+  "keywords": [
+    "resume",
+    "blog",
+    "website",
+    "professional"
+  ],
+  "author": "Kenneth C. LaMarca",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
