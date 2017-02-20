@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Act as a personal website and professional resume or blog",
   "scripts": {
-    "start" : "node Server.js"
- },
+    "start": "node Server.js"
+  },
   "keywords": [
     "resume",
     "blog",
@@ -12,8 +12,18 @@
     "professional"
   ],
   "author": "Kenneth C. LaMarca",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.14.1"
-  }
+  },
+  "main": "Server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://LegatusNewt@github.com/LegatusNewt/PersonalWebsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LegatusNewt/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/LegatusNewt/PersonalWebsite#readme"
 }

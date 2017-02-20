@@ -22,28 +22,12 @@
             <input  type="text" name="mail" style="width:200px;"><br>
             Comment:<br>
             <textarea id="message" name="comment" size="50" style="height:100px;width:200px;"></textarea><br><br>
-            <a id="send-mail" class="btn btn-primary">Send Email</a>      
-        <h>
-            <b>Personal Enquiries</b>
-        </h>
-        <p>
-            Email : kennywu1005@gmail.com
-        </p>
+            <a id="send-mail"  class="btn btn-primary">Send Email</a>      
         </body>
     </div>
 </html>
     
 
-<script type="text/javascript">
-    function loadEvents() {
-        var mailString;
-        function updateMailString() {
-            mailString = '?subject=' + encodeURIComponent($('#subject').val())
-                + '&body=' + encodeURIComponent($('#message').val());
-            $('#mail-link').attr('href',  'mailto:kennywu1005@gmail.com' + mailString);
-        }
-        $( "#subject" ).focusout(function() { updateMailString(); });
-        $( "#message" ).focusout(function() { updateMailString(); });
-        updateMailString();
-    }
+<script type="text/javascript">    
+    
 </script>
