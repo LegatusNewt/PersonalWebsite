@@ -44,4 +44,22 @@ li a{
     display:block;
     width:100px;
 }
+
+.item{
+    text-align:center;
+    height:inherit;
+}
+
+.carouselimg{
+    object-fit: fill;
+    overflow:hidden;
+    min-height:100%;
+    min-width:100%;
+}
+
+.custom-slide{
+    height:300px;
+    width:100
+}
+
 Try it Yourself »

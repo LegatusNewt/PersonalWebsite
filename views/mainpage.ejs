@@ -4,23 +4,50 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="angular/angular.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 
 <html lang="en">    
  
     <% include navbar.ejs %>
-    <div class="container">
-        <body>    
-        <h>
-            Kenneth C. LaMarca
-        </h>
-        <p>
-            This will serve as my main page until I figure out what I want to put on this website
-        </p>
-        </body>
+    <div class="container" ng-app="app">
+         <div ng-controller="featuredController" id="slides_control">
+            <div>
+              <carousel interval="myInterval">
+                <slide class="custom-slide" ng-repeat="slide in slides" active="slide.active">
+                  <img class="carouselimg" ng-src="{{slide.image}}">
+                  <div class="carousel-caption">
+                    <h4>Slide {{$index+1}}</h4>
+                  </div>
+                </slide>
+              </carousel>
+            </div>
+          </div>
     </div>
 </html>
 
+<script
+src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 
+    <script>
+    var app = angular.module('app', ['ui.bootstrap']);
     
+    app.controller("featuredController", 
+    function($scope){
+      $scope.slides = [
+        {
+          image: 'http://images.akamai.steamusercontent.com/ugc/486766424838317870/F7D866FD2975DF660FE512F13F66A6C4E1849BFA/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|1024:576&composite-to%3D%2A%2C%2A%7C1024%3A576&background-color=black'
+        },
+        {
+          image: 'http://lorempixel.com/400/200/food'
+        },
+        {
+          image: 'http://lorempixel.com/400/200/sports'
+        },
+        {
+          image: 'http://lorempixel.com/400/200/people'
+        }
+      ];
+    });
+</script>
